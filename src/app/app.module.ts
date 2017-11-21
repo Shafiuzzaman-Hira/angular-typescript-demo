@@ -2,13 +2,17 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, Pipe, PipeTransform } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
-import { MaterialModule } from './material.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 import { AlertModule } from 'ngx-bootstrap';
 import { DataTableModule} from "angular2-datatable";
+
+import { MaterialModule } from './shared/material.module';
+import { searchPipe } from './shared/pipe'
+
 import { AppComponent } from './app.component';
 import { ProductsComponent } from '../app/products/products.components';
-import {searchPipe} from './pipe'
+
 
 @Pipe({name: 'searchFilter'})
 @NgModule({
@@ -22,8 +26,8 @@ import {searchPipe} from './pipe'
     BrowserModule,
     FormsModule,
     HttpModule,
-    MaterialModule,
     BrowserAnimationsModule,
+    MaterialModule,
     DataTableModule,
     AlertModule.forRoot()
   ],

@@ -1,7 +1,7 @@
 import { Component, OnInit, Pipe, PipeTransform  } from '@angular/core';
-import { Product } from '../product'
-import { PRODUCTS } from '../mock-products';
-import {columnPipe,rowPipe,searchPipe} from '../pipe'
+import { Product } from './product'
+import { PRODUCTS } from './mock-products';
+import { searchPipe } from '../shared/pipe'
 import * as _ from 'lodash';
 
 
