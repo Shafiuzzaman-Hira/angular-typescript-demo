@@ -28,7 +28,5 @@ export class ProductsComponent implements OnInit {
   public removeItem(item: any) {
     this.products = _.filter(this.products, (elem) => elem != item);
     console.log("Remove: ", item.email);
-  }
-
-  
+  } 
 }

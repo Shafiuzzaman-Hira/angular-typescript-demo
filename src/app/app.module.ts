@@ -12,6 +12,8 @@ import { searchPipe } from './shared/pipe'
 
 import { AppComponent } from './app.component';
 import { ProductsComponent } from '../app/products/products.components';
+import { ProductFormComponent } from '../app/products/product-form.component';
+import { AppRoutingModule } from './/app-routing.module';
 
 
 @Pipe({name: 'searchFilter'})
@@ -19,6 +21,7 @@ import { ProductsComponent } from '../app/products/products.components';
   declarations: [
     AppComponent,
     ProductsComponent,
+    ProductFormComponent,
     searchPipe
   ],
 
@@ -29,7 +32,8 @@ import { ProductsComponent } from '../app/products/products.components';
     BrowserAnimationsModule,
     MaterialModule,
     DataTableModule,
-    AlertModule.forRoot()
+    AlertModule.forRoot(),
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
