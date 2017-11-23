@@ -1,4 +1,4 @@
-import { Product } from './product';
+import { Product } from './product.model';
 
 export const PRODUCTS: Product[] = [
   { id: 1, code: '101', name: 'Al Wadia Current', currencyRestriction: 'Local', currency:'BDT',  profitBearing: 'Yes', status: 'Active'},

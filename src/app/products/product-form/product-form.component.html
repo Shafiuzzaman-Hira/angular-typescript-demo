@@ -1,0 +1,55 @@
+<div class="panel panel-primary">
+  <div class="panel-heading">
+      <h4>Add New Product</h4>
+  </div>
+  <div class="panel-body">
+    <mat-tab-group>
+      <mat-tab label="Basic Information">
+        <br/>
+          <div class="example-container col-md-5">
+              <mat-form-field>
+                <input matInput placeholder="Code">
+              </mat-form-field>
+            
+              <mat-form-field>
+                <textarea matInput placeholder="Description"></textarea>
+              </mat-form-field>   
+
+              <mat-checkbox>Minimum Balance Enforce</mat-checkbox>
+              <mat-checkbox>Override in Account</mat-checkbox>
+              
+            </div>
+            
+            <div class="example-container col-md-5 col-md-offset-2">
+                <mat-form-field>
+                  <input matInput placeholder="Name">
+                </mat-form-field>
+              
+                <!-- <mat-form-field>
+                  <textarea matInput placeholder="Textarea"></textarea>
+                </mat-form-field> -->
+              
+                <mat-form-field>
+                  <mat-select placeholder="Currency Restriction">
+                    <mat-option *ngFor="let cr of currencyRestriction" [value]="cr">{{cr}}</mat-option>
+                  </mat-select>
+                </mat-form-field>
+
+                <mat-form-field>
+                    <mat-select placeholder="Currency">
+                      <mat-option *ngFor="let currency of currencies" [value]="currency">{{currency}}</mat-option>
+                    </mat-select>
+                </mat-form-field>
+
+                <mat-form-field>
+                    <input matInput placeholder="Minimum Balance">
+                </mat-form-field>
+              </div>
+      </mat-tab>
+      <mat-tab label="Profit Earning Criteria">Content 2</mat-tab>
+    </mat-tab-group>
+  </div>
+</div>
+
+
+
