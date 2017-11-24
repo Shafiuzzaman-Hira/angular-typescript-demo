@@ -1,8 +1,5 @@
-.example-container {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .example-container > * {
-    width: 100%;
-  }
+a.disabled, a.disabled:visited {
+    pointer-events: none;
+    cursor: default;
+    color: gray;
+ }

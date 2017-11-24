@@ -1,0 +1,75 @@
+<br/>
+<div class="panel panel-default">
+    <div class="panel-body">
+        <div class="row form-horizontal">
+            <div class="example-container col-md-5">
+                <mat-form-field>
+                    <input matInput placeholder="Code">
+                </mat-form-field>
+                <br/>
+                <mat-form-field>
+                    <textarea matInput placeholder="Description"></textarea>
+                </mat-form-field>
+            </div>
+
+            <div class="example-container col-md-5 col-md-offset-2">
+                <mat-form-field>
+                    <input matInput placeholder="Name">
+                </mat-form-field>
+                <br/>
+                <mat-form-field>
+                    <mat-select placeholder="Currency Restriction">
+                        <mat-option *ngFor="let cr of currencyRestriction" [value]="cr">{{cr}}</mat-option>
+                    </mat-select>
+                </mat-form-field>
+                <br/>
+                <mat-form-field>
+                    <mat-select placeholder="Currency">
+                        <mat-option *ngFor="let currency of currencies" [value]="currency">{{currency}}</mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+        </div>
+    </div>
+</div>
+
+<b>Profit Earning Criteria</b>
+<div class="panel panel-default">
+    <div class="panel-body">
+        <div class="row form-horizontal">
+            <div class="example-container col-md-5">
+                <mat-checkbox>
+                    <h5>Profit Bearing</h5>
+                </mat-checkbox>
+                <br/>
+                <mat-form-field>
+                    <input matInput placeholder="Profit Calculation Type">
+                </mat-form-field>
+                <br/>
+                <mat-form-field>
+                    <input matInput placeholder="Monthly Product Calculation based on">
+                </mat-form-field>
+                <br/>
+                <mat-form-field>
+                    <input matInput placeholder="Minimum Profit to Apply">
+                </mat-form-field>
+            </div>
+
+            <div class="example-container col-md-5 col-md-offset-2">
+                <mat-form-field>
+                    <input matInput placeholder="Balance Required to Profit Calculation">
+                </mat-form-field>
+                <br/>
+                <mat-form-field>
+                    <input matInput placeholder="Daily Product Calculation based on">
+                </mat-form-field>
+                <br/>
+                <mat-form-field>
+                    <input matInput placeholder="Days in a year">
+                </mat-form-field>
+            </div>
+        </div>
+    </div>
+</div>
+
+

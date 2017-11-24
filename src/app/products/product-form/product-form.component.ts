@@ -12,4 +12,7 @@ export class ProductFormComponent {
 
   currencyRestriction = ['Local', 'Global'];
   currencies = ['BDT', 'USD ($)', 'EUR (€)', 'CAD (C$)', 'AUD (A$)'];
+
+  private activeTab : number = 1;
+
 }

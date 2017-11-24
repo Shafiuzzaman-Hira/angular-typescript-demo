@@ -14,19 +14,24 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 
+import { AppRoutingModule } from './/app-routing.module';
+
 import { searchPipe } from './shared/pipe'
 import { AppComponent } from './app.component';
 import { ProductsComponent } from '../app/products/products.components';
 import { ProductFormComponent } from '../app/products/product-form/product-form.component';
-import { AppRoutingModule } from './/app-routing.module';
-
+import { ProductInfoBasicComponent } from '../app/products/product-info/product-info-basic.component';
+import { ProductInfoRulesComponent } from '../app/products/product-info/product-info-rules.component';
+import { ProductInfoOthersComponent } from '../app/products/product-info/product-info-others.component';
 
 @Pipe({name: 'searchFilter'})
+
 @NgModule({
   declarations: [
     AppComponent,
     ProductsComponent,
     ProductFormComponent,
+    ProductInfoBasicComponent, ProductInfoRulesComponent, ProductInfoOthersComponent,
     searchPipe
   ],
 

@@ -1,0 +1,135 @@
+<br/>
+<div class="panel panel-default">
+    <div class="panel-body">
+        <div class="row form-horizontal">
+            <div class="example-container col-md-5">
+                <mat-checkbox>
+                    <h5>Sweep-in Allowed</h5>
+                </mat-checkbox>
+                <br/>
+                <mat-checkbox>
+                    <h5>Introducer Required</h5>
+                </mat-checkbox>
+            </div>
+
+            <div class="example-container col-md-5 col-md-offset-2">
+                <mat-checkbox>
+                    <h5>Sweep-out Allowed</h5>
+                </mat-checkbox>
+            </div>
+        </div>
+    </div>
+</div>
+
+<b>Cheque</b>
+<div class="panel panel-default">
+    <div class="panel-body">
+        <div class="row form-horizontal">
+            <div class="example-container col-md-5">
+                <mat-form-field>
+                    <input matInput placeholder="SND">
+                </mat-form-field>
+            </div>
+
+            <div class="example-container col-md-2 col-md-offset-2">
+                <button class="btn btn-md btn-primary">Add / Update</button>
+            </div>
+        </div>
+
+        <div class="row">
+            <table class="table table-striped text-center" [mfData]="snd" #mf="mfDataTable" [mfRowsOnPage]="3" mfSortBy="code">
+                <thead>
+                    <tr>
+                        <th class="text-center">
+                            <mfDefaultSorter by="code">#</mfDefaultSorter>
+                        </th>
+                        <th class="text-center">
+                            <mfDefaultSorter by="name">Prefix</mfDefaultSorter>
+                        </th>
+                        <th class="text-center">
+                            Actions
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let data of mf.data">
+                        <td>{{data.id}}</td>
+                        <td>{{data.prefix}}</td>
+                        <td>
+                            <button class="btn btn-primary btn-xs" title="View Details">
+                                <span class="glyphicon glyphicon-book"></span>
+                            </button>
+                            <button class="btn btn-warning btn-xs" title="Edit">
+                                <span class="glyphicon glyphicon-edit"></span>
+                            </button>
+                            <button class="btn btn-danger btn-xs" title="Remove" (click)="removeItem(product)">
+                                <span class="glyphicon glyphicon-trash"></span>
+                            </button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<b>GL Mapping</b>
+<div class="panel panel-default">
+    <div class="panel-body">
+        <div class="row form-horizontal">
+            <div class="example-container col-md-5">
+                <mat-form-field>
+                    <input matInput placeholder="Type">
+                </mat-form-field>
+            </div>
+
+            <div class="example-container col-md-5">
+                <mat-form-field>
+                    <input matInput placeholder="GL Code">
+                </mat-form-field>
+            </div>
+            <div class="example-container col-md-2">
+                <button class="btn btn-md btn-primary">Add / Update</button>
+            </div>
+        </div>
+
+        <div class="row">
+            <table class="table table-striped text-center" [mfData]="gl" #mf="mfDataTable" [mfRowsOnPage]="3" mfSortBy="code">
+                <thead>
+                    <tr>
+                        <th class="text-center">
+                            <mfDefaultSorter by="type">Type</mfDefaultSorter>
+                        </th>
+                        <th class="text-center">
+                            <mfDefaultSorter by="code">Code</mfDefaultSorter>
+                        </th>
+                        <th class="text-center">
+                            <mfDefaultSorter by="desc">Description</mfDefaultSorter>
+                        </th>
+                        <th class="text-center">
+                            Actions
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let data of mf.data">
+                        <td>{{data.type}}</td>
+                        <td>{{data.code}}</td>
+                        <td>{{data.desc}}</td>
+                        <td>
+                            <button class="btn btn-primary btn-xs" title="View Details">
+                                <span class="glyphicon glyphicon-book"></span>
+                            </button>
+                            <button class="btn btn-warning btn-xs" title="Edit">
+                                <span class="glyphicon glyphicon-edit"></span>
+                            </button>
+                            <button class="btn btn-danger btn-xs" title="Remove" (click)="removeItem(product)">
+                                <span class="glyphicon glyphicon-trash"></span>
+                            </button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
