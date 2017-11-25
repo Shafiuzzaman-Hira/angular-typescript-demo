@@ -16,6 +16,7 @@ import * as _ from 'lodash';
 export class ProductsComponent implements OnInit {
 
   products = PRODUCTS;
+  
   constructor() { }
 
   ngOnInit() {
