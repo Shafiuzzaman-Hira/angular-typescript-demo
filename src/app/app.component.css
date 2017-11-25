@@ -31,3 +31,21 @@
     background-color: #428bca;
 }
 
+ul li{
+    cursor:pointer;
+    list-style-type: none;
+    padding: 5px;
+}
+
+ul li ul li .active{
+    color: #fff;
+    background-color: #428bca;
+}
+
+.active ul{display:block !important;}
+
+.submenu {
+    text-decoration-line: none !important;
+    text-decoration-style: none !important;
+    text-decoration-color: none !important;
+}

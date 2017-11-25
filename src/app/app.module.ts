@@ -13,7 +13,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatCheckboxModule } from '@angular/material/checkbox';
-
+import {MatListModule} from '@angular/material/list';
 import { AppRoutingModule } from './/app-routing.module';
 
 import { searchPipe } from './shared/pipe'
@@ -40,7 +40,7 @@ import { ProductInfoOthersComponent } from '../app/products/product-info/product
     FormsModule,
     HttpModule,
     BrowserAnimationsModule,
-    MaterialModule, MatFormFieldModule, MatInputModule, MatSelectModule, MatTabsModule, MatCheckboxModule,
+    MaterialModule, MatFormFieldModule, MatInputModule, MatSelectModule, MatTabsModule, MatCheckboxModule, MatListModule,
     DataTableModule,
     AlertModule.forRoot(),
     AppRoutingModule,
