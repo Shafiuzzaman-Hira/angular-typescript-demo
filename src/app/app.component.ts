@@ -40,18 +40,17 @@ export class AppComponent {
         "subMenu": [
           {
             "name": "View",
-            "link": "/productlist"
+            "link": "/profitrates"
           },
           {
             "name": "Create",
-            "link": "/productform"
+            "link": "/createrate"
           }
         ]
       },
     ];
 
   }
-
 
   select(item) {
     this.selected = (this.selected === item ? null : item);

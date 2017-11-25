@@ -13,7 +13,10 @@ import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatCheckboxModule } from '@angular/material/checkbox';
-import {MatListModule} from '@angular/material/list';
+import {MatListModule} from '@angular/material/list'
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import {MatNativeDateModule} from '@angular/material';
+
 import { AppRoutingModule } from './/app-routing.module';
 
 import { searchPipe } from './shared/pipe'
@@ -23,6 +26,8 @@ import { ProductFormComponent } from '../app/products/product-form/product-form.
 import { ProductInfoBasicComponent } from '../app/products/product-info/product-info-basic.component';
 import { ProductInfoRulesComponent } from '../app/products/product-info/product-info-rules.component';
 import { ProductInfoOthersComponent } from '../app/products/product-info/product-info-others.component';
+import { ProfitRatesComponent } from '../app/profit-rates/profit-rates.component';
+import { ProfitRateCreate } from '../app/profit-rates/profit-rates-create.component';
 
 @Pipe({name: 'searchFilter'})
 
@@ -31,7 +36,7 @@ import { ProductInfoOthersComponent } from '../app/products/product-info/product
     AppComponent,
     ProductsComponent,
     ProductFormComponent,
-    ProductInfoBasicComponent, ProductInfoRulesComponent, ProductInfoOthersComponent,
+    ProductInfoBasicComponent, ProductInfoRulesComponent, ProductInfoOthersComponent, ProfitRatesComponent, ProfitRateCreate,
     searchPipe
   ],
 
@@ -41,6 +46,7 @@ import { ProductInfoOthersComponent } from '../app/products/product-info/product
     HttpModule,
     BrowserAnimationsModule,
     MaterialModule, MatFormFieldModule, MatInputModule, MatSelectModule, MatTabsModule, MatCheckboxModule, MatListModule,
+    MatDatepickerModule, MatNativeDateModule,
     DataTableModule,
     AlertModule.forRoot(),
     AppRoutingModule,

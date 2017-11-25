@@ -2,14 +2,15 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ProductsComponent } from '../app/products/products.components';
 import { ProductFormComponent } from '../app/products/product-form/product-form.component';
-import { ProductInfoBasicComponent } from '../app/products/product-info/product-info-basic.component';
+import { ProfitRatesComponent} from '../app/profit-rates/profit-rates.component';
+import { ProfitRateCreate } from '../app/profit-rates/profit-rates-create.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/productlist', pathMatch: 'full' },
   { path: 'productlist', component: ProductsComponent },
   { path: 'productform', component: ProductFormComponent },
-  { path: 'productbasicinfo', component: ProductInfoBasicComponent },
-  { path: 'productrules', component: ProductInfoBasicComponent }
+  { path: 'profitrates', component: ProfitRatesComponent },
+  { path: 'createrate', component: ProfitRateCreate },
 ];
 
 @NgModule({

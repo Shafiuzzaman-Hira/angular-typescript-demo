@@ -1,0 +1,55 @@
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h4>Create New Profit Rate
+        </h4>
+    </div>
+
+    <div class="panel-body">
+        <div class="row form-horizontal">
+            <div class="example-container col-md-5">
+                <mat-form-field>
+                    <input matInput placeholder="Product">
+                </mat-form-field>
+                <br/>
+                <mat-form-field>
+                    <input matInput [matDatepicker]="picker" placeholder="From Date">
+                    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-datepicker #picker></mat-datepicker>
+                </mat-form-field>
+                <mat-form-field>
+                    <input matInput placeholder="Amount From">
+                </mat-form-field>
+
+                <mat-form-field>
+                    <input matInput placeholder="Rate">
+                </mat-form-field>
+            </div>
+
+            <div class="example-container col-md-5 col-md-offset-2">
+                <mat-form-field>
+                    <mat-select placeholder="Currency">
+                        <mat-option *ngFor="let currency of currencies" [value]="currency">{{currency}}</mat-option>
+                    </mat-select>
+                </mat-form-field>
+                <br/>
+                <mat-form-field>
+                    <input matInput [matDatepicker]="toDate" placeholder="To Date">
+                    <mat-datepicker-toggle matSuffix [for]="toDate"></mat-datepicker-toggle>
+                    <mat-datepicker #toDate></mat-datepicker>
+                </mat-form-field>
+                <br/>
+                <mat-form-field>
+                    <input matInput placeholder="Amount To">
+                </mat-form-field>
+            </div>
+        </div>
+
+        <ul class="pager">
+            <li>
+                <button class="btn btn-md btn-primary" routerLink="/profitrates">
+                    <i class="glyphicon glyphicon-floppy-disk"></i>
+                </button>
+            </li>
+        </ul>
+    </div>
+</div>
