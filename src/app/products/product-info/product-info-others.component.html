@@ -31,20 +31,20 @@
                 </mat-form-field>
             </div>
 
-            <div class="example-container col-md-2 col-md-offset-2">
+            <div class="example-container col-md-2 col-md-offset-5">
                 <button class="btn btn-md btn-primary">Add / Update</button>
             </div>
         </div>
 
         <div class="row">
-            <table class="table table-striped text-center" [mfData]="snd" #mf="mfDataTable" [mfRowsOnPage]="3" mfSortBy="code">
+            <table class="table table-striped text-center">
                 <thead>
                     <tr>
                         <th class="text-center">
-                            <mfDefaultSorter by="code">#</mfDefaultSorter>
+                            #
                         </th>
                         <th class="text-center">
-                            <mfDefaultSorter by="name">Prefix</mfDefaultSorter>
+                           Prefix
                         </th>
                         <th class="text-center">
                             Actions
@@ -52,7 +52,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr *ngFor="let data of mf.data">
+                    <tr *ngFor="let data of snd">
                         <td>{{data.id}}</td>
                         <td>{{data.prefix}}</td>
                         <td>
