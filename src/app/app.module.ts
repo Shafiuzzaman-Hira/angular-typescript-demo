@@ -22,8 +22,8 @@ import { AppRoutingModule } from './/app-routing.module';
 import { searchPipe } from './shared/pipe'
 import { AppComponent } from './app.component';
 import { ProductsComponent } from '../app/products/products.components';
-import { ProductFormComponent } from '../app/products/product-form/product-form.component';
 import { ProductInfoBasicComponent } from '../app/products/product-info/product-info-basic.component';
+import { ProductFormComponent } from '../app/products/product-form/product-form.component';
 import { ProductInfoRulesComponent } from '../app/products/product-info/product-info-rules.component';
 import { ProductInfoOthersComponent } from '../app/products/product-info/product-info-others.component';
 import { ProfitRatesComponent } from '../app/profit-rates/profit-rates.component';
@@ -35,8 +35,9 @@ import { ProfitRateCreate } from '../app/profit-rates/profit-rates-create.compon
   declarations: [
     AppComponent,
     ProductsComponent,
+    ProductInfoBasicComponent,
     ProductFormComponent,
-    ProductInfoBasicComponent, ProductInfoRulesComponent, ProductInfoOthersComponent, ProfitRatesComponent, ProfitRateCreate,
+    ProductInfoRulesComponent, ProductInfoOthersComponent, ProfitRatesComponent, ProfitRateCreate,
     searchPipe
   ],
 

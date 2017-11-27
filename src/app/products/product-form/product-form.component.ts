@@ -1,4 +1,5 @@
-import { Component} from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
+import { ProductInfoBasicComponent } from '../product-info/product-info-basic.component'
 
 @Component({
   selector: 'product-form',
@@ -14,5 +15,6 @@ export class ProductFormComponent {
   currencies = ['BDT', 'USD ($)', 'EUR (€)', 'CAD (C$)', 'AUD (A$)'];
 
   private activeTab : number = 1;
+  private childFormValid: boolean;
 
 }

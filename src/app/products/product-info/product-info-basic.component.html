@@ -1,10 +1,12 @@
+<form  class="form-horizontal" (ngSubmit)="onSubmit()" #productBasicForm="ngForm">
 <br/>
 <div class="panel panel-default">
     <div class="panel-body">
         <div class="row form-horizontal">
             <div class="example-container col-md-5">
                 <mat-form-field>
-                    <input matInput placeholder="Code">
+                    <input matInput placeholder="Code"[(ngModel)]="product.code" #productCode="ngModel"  name="code"  required>
+                    <mat-error [hidden]="name.valid || name.pristine">Code is required</mat-error>
                 </mat-form-field>
                 <br/>
                 <mat-form-field>
@@ -14,7 +16,8 @@
 
             <div class="example-container col-md-5 col-md-offset-2">
                 <mat-form-field>
-                    <input matInput placeholder="Name">
+                    <input matInput placeholder="Name" [(ngModel)]="product.name" #name="ngModel" name="name" required>
+                    <mat-error [hidden]="name.valid || name.pristine">Name is required</mat-error>
                 </mat-form-field>
                 <br/>
                 <mat-form-field>
@@ -71,5 +74,5 @@
         </div>
     </div>
 </div>
-
+</form>
 

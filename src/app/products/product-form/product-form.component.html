@@ -9,7 +9,7 @@
   <div class="panel-body">
     <mat-tab-group>
       <mat-tab label="Basic Information" *ngIf="activeTab == 1">
-        <product-info-basic></product-info-basic>
+        <product-info-basic (validityChange)="childFormValid = $event"></product-info-basic>
       </mat-tab>
       <mat-tab label="Rules" *ngIf="activeTab == 2">
         <product-info-rules></product-info-rules>
@@ -26,8 +26,7 @@
         </button>
       </li>
       <li>
-        <button *ngIf="activeTab < 3" class="btn btn-md btn-primary" routerLink="/productform" routerLinkActive="active" (click)="activeTab = activeTab + 1">
-
+        <button *ngIf="activeTab < 3" [disabled]="!childFormValid" class="btn btn-md btn-primary" routerLink="/productform" routerLinkActive="active" (click)="activeTab = activeTab + 1">
           <i class="glyphicon glyphicon-arrow-right"></i>
         </button>
       </li>
@@ -36,6 +35,7 @@
             <i class="glyphicon glyphicon-floppy-disk"></i>
           </button>
         </li>
+        <mat-error *ngIf="!childFormValid">Please fill up the required field(s).</mat-error>
     </ul>
   </div>
 </div>
