@@ -11,33 +11,18 @@
       <mat-sidenav-container>
         <mat-sidenav #sidenav mode="side" opened="true" class="main-sidebar sidebar" role="navigation">
           <ul class="nav nav-sidebar">
-            <!-- <li>
-              <a href="#">Dashboard
-              </a>
-            </li>
-            <li> <a data-toggle="collapse" href="#collapse1">Products</a>
-              <span class="sr-only">(current)</span>
-            </li>
-            <li>
-              <a href="#">Reports</a>
-            </li>
-            <li>
-              <a href="#">GI Account</a>
-            </li>
-            <li>
-                <a href="#">CIF</a>
-            </li> -->
             <li *ngFor="let n of menuList" (click)="select(n.name);" [ngClass]="{active: isActive(n.name)}">
-              <a><span class={{n.icon}} aria-hidden="true"></span> {{n.name}}
-                  <span *ngIf="n.hasOwnProperty('subMenu')" class="caret"></span>
+              <a>
+                <span class={{n.icon}} aria-hidden="true"></span> {{n.name}}
+                <span *ngIf="n.hasOwnProperty('subMenu')" class="caret"></span>
               </a>
               <ul style="display:none;">
                 <li *ngFor="let child of n.subMenu" (click)="select(n.name);" [ngClass]="{active: isActive(child.name)}">
                   <a class="submenu" routerLink={{child.link}} routerLinkActive="active">{{child.name}}
-                      <span *ngIf="child.hasOwnProperty('subMenu')" class="caret"></span>
-                      <br/>
+                    <span *ngIf="child.hasOwnProperty('subMenu')" class="caret"></span>
+                    <br/>
                   </a>
-                 
+
                 </li>
               </ul>
             </li>
@@ -50,6 +35,16 @@
           <br/>
         </div>
       </mat-sidenav-container>
+    </div>
+
+    <div class="panel-footer">
+      <div class="pull-right hidden-xs">
+        <b>Version</b> 1.0.1
+      </div>
+      <div class="col-md-offset-5">
+        <strong>Copyright &copy; 2017
+          <a href="https://www.linkedin.com/in/mdshafiuzzamanhira/">Md. Shafiuzzaman Hira</a>.</strong> All rights reserved.
+      </div>
     </div>
   </div>
 
