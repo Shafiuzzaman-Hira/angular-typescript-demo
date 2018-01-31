@@ -27,6 +27,6 @@ export class ProductInfoBasicComponent {
         if(this.validStatus !== this.form.valid) {
           this.validStatus = this.form.valid;
           this.validityChange.emit(this.form.valid);
-      });
+      }});
   }
 }
